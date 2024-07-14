@@ -11,14 +11,15 @@ typedef struct list
     struct list *next;
 } list;
 
-list *first = NULL;
-list *second = NULL;
-list *third = NULL;
+list *first;
+list *second;
+list *third;
 
 void *findMaxBlock(list *head)
 {
     size_t tmp = 0;
     list *current = head;
+    list *current_new = head;
     // Определяем максимальный размер узла
     while (current != NULL)
     {
@@ -27,11 +28,11 @@ void *findMaxBlock(list *head)
         current = current->next;
     }
     // Находим адрес узла с максимальным размером
-    while (head != NULL)
+    while (current_new != NULL)
     {
-        if (head->size == tmp)
-            return head->address;
-        head = head->next;
+        if (current_new->size == tmp)
+            return current_new->address;
+        current_new = current_new->next;
     }
     return NULL;
 }
@@ -43,24 +44,24 @@ int main(void)
     third = (list *) malloc(sizeof(list));
 
     // Заполнение данными узла first
-    first->address = (void *) 140525067852320;
+    first->address = &first;
     first->size = 10;
     strcpy(first->comment, "main.c");
     first->next = second;
 
     // Заполнение данными узла second
-    second->address = (void *) 140525067852350;
+    second->address = &second;
     second->size = 30;
     strcpy(second->comment, "main.c");
     second->next = third;
 
     // Заполнение данными узла third
-    third->address = (void *) 140525067852900;
+    third->address = &third;
     third->size = 100;
     strcpy(third->comment, "main.c");
     third->next = NULL;
 
-    printf("%llu", (long long int) findMaxBlock(first));
+    printf("%llu\n", (long long int) findMaxBlock(first));
 
     free(first);
     free(second);
