@@ -36,14 +36,14 @@
 занимающий больше всего места
 
 <p align="center">
-<img src="images/2_1.png" alt="drawing" width="500"/>
+<img src="images/2_1.png" alt="drawing" width="550"/>
 </p>
 
 * <strong> 2.c </strong> Функция size_t totalMemoryUsage(list *head), которая анализирует список и возвращает
 сколько всего памяти используется.
 
 <p align="center">
-<img src="images/2_2.png" alt="drawing" width="500"/>
+<img src="images/2_2.png" alt="drawing" width="550"/>
 </p>
 
 <p align="right">(<a href="#readme-top">вверх</a>)</p>
