@@ -46,7 +46,7 @@
 <img src="images/2_2.png" alt="drawing" width="550"/>
 </p>
 
-<strong> &#128194; hw2_optional. Структуры. Динамические типы</strong> 
+<strong> &#128194; hw2_optional.</strong> 
 
 * <strong> 3.c </strong> Поиск утечки памяти с помощью макросов.
 
