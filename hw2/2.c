@@ -10,15 +10,15 @@ typedef struct list
     struct list *next;
 } list;
 
-list *first;
-list *second;
-list *third;
+list *first = NULL;
+list *second = NULL;
+list *third = NULL;
 
 size_t totalMemoryUsage(list *head)
 {
     size_t sum = 0;
     list *current = head;
-    if (current == NULL)
+    if (head == NULL)
         return 0;
     while (current != NULL)
     {

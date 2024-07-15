@@ -11,15 +11,17 @@ typedef struct list
     struct list *next;
 } list;
 
-list *first;
-list *second;
-list *third;
+list *first = NULL;
+list *second = NULL;
+list *third = NULL;
 
 void *findMaxBlock(list *head)
 {
     size_t tmp = 0;
     list *current = head;
     list *current_new = head;
+    if (head == NULL)
+        return NULL;
     // Определяем максимальный размер узла
     while (current != NULL)
     {
