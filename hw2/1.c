@@ -48,19 +48,19 @@ int main(void)
     // Заполнение данными узла first
     first->address = &first;
     first->size = 10;
-    strcpy(first->comment, "main.c");
+    sprintf(first->comment, "%s, %i, %s", __FILE__, __LINE__, __FUNCTION__);
     first->next = second;
 
     // Заполнение данными узла second
     second->address = &second;
     second->size = 30;
-    strcpy(second->comment, "main.c");
+    sprintf(second->comment, "%s, %i, %s", __FILE__, __LINE__, __FUNCTION__);
     second->next = third;
 
     // Заполнение данными узла third
     third->address = &third;
     third->size = 100;
-    strcpy(third->comment, "main.c");
+    sprintf(third->comment, "%s, %i, %s", __FILE__, __LINE__, __FUNCTION__);
     third->next = NULL;
 
     printf("%llu\n", (long long int) findMaxBlock(first));
