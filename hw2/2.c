@@ -10,43 +10,44 @@ typedef struct list
     struct list *next;
 } list;
 
-list *first = NULL;
-list *second = NULL;
-list *third = NULL;
+list *first;
+list *second;
+list *third;
 
 size_t totalMemoryUsage(list *head)
 {
     size_t sum = 0;
-    if (head == NULL)
+    list *current = head;
+    if (current == NULL)
         return 0;
-    while (head != NULL)
+    while (current != NULL)
     {
-        sum += head->size;
-        head = head->next;
+        sum += current->size;
+        current = current->next;
     }
     return sum;
 }
 
 int main(void)
 {
-    first = (list *) malloc(sizeof(list));
-    second = (list *) malloc(sizeof(list));
-    third = (list *) malloc(sizeof(list));
+    first = (list *) calloc(1, sizeof(list));
+    second = (list *) calloc(1, sizeof(list));
+    third = (list *) calloc(1, sizeof(list));
 
     // Заполнение данными узла first
-    first->address = (void *) 140525067852320;
+    first->address = &first;
     first->size = 10;
     strcpy(first->comment, "main.c");
     first->next = second;
 
     // Заполнение данными узла second
-    second->address = (void *) 140525067852350;
+    second->address = &second;
     second->size = 30;
     strcpy(second->comment, "main.c");
     second->next = third;
 
     // Заполнение данными узла third
-    third->address = (void *) 140525067852900;
+    third->address = &third;
     third->size = 100;
     strcpy(third->comment, "main.c");
     third->next = NULL;
