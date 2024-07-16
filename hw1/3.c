@@ -4,8 +4,8 @@
 int main(void)
 {
     uint32_t a;
-    unsigned int b;
-    scanf("%u%u", &a, &b);
+    uint8_t b;
+    scanf("%u%hhd", &a, &b);
     printf("%u\n", (a >> b) | (a << (32 - b)));
     return 0;
 }
