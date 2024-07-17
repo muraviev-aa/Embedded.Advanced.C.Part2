@@ -88,6 +88,10 @@
 
 <strong> &#128194; hw3. Библиотеки языка С</strong> 
 
+<strong> &#128194; hw3_optional.</strong> 
+
++ <strong>&#128448; 35 Создание статической библиотеки</strong>
+
 <p align="right">(<a href="#readme-top">вверх</a>)</p>
 
 -----
