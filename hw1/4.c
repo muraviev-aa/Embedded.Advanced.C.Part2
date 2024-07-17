@@ -8,9 +8,9 @@ uint32_t bit_extract(uint32_t a, uint8_t b)
 
 int main(void)
 {
-    uint32_t a;
-    uint8_t b;
-    scanf("%u%hhd", &a, &b);
-    printf("%u", bit_extract(a, b));
+    uint32_t N;
+    uint8_t K;
+    scanf("%u%hhd", &N, &K);
+    printf("%u", bit_extract(N, K));
     return 0;
 }
