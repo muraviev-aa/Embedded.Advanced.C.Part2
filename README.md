@@ -90,7 +90,7 @@
 
 <strong> &#128194; hw3_optional.</strong> 
 
-+ <strong>&#128448; 35 Создание статической библиотеки</strong>
++ <strong>&#128448; 3_1 Создание статической библиотеки</strong>
 
 <p align="right">(<a href="#readme-top">вверх</a>)</p>
 
