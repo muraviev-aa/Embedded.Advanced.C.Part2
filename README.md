@@ -96,6 +96,8 @@
 
 * <strong> 1.c </strong> Использование библиотеки assert.h;
 
+* <strong> 2.c </strong> Использование библиотеки time.h.
+
 <p align="right">(<a href="#readme-top">вверх</a>)</p>
 
 -----
