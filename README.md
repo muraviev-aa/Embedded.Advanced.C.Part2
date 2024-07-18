@@ -6,7 +6,7 @@
 
 # Программирование на Си. Продвинутый уровень.
 <p align="center">
-<img src="images/c.png" alt="drawing" width="260"/>
+<img src="images/c.png" alt="drawing" width="300"/>
 </p>
 
 ### В этом проекте рассмотрены: 
