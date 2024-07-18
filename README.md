@@ -94,6 +94,8 @@
 
 + <strong>&#128448; 3_2 Создание динамической библиотеки</strong>
 
+* <strong> 1.c </strong> Использование библиотеки assert.h;
+
 <p align="right">(<a href="#readme-top">вверх</a>)</p>
 
 -----
