@@ -94,6 +94,8 @@
 
 + <strong>&#128448; 3_2 Создание динамической библиотеки</strong>
 
++ <strong>&#128448; snake Игра змейка</strong>
+
 * <strong> 1.c </strong> Использование библиотеки assert.h;
 
 * <strong> 2.c </strong> Использование библиотеки time.h.
