@@ -85,19 +85,24 @@ void go(struct snake_t *head)
     switch (head->direction)
     {
         case LEFT:
-            if(head->x <= 0) // Циклическое движение, чтобы не
-// уходить за пределы экрана
-                head->x = max_x;
-            mvprintw(head->y, --(head->x), "%c", ch);
+            if(head->x <= 0)                            // Змейка пересекает левую границу
+                head->x = max_x;                        // Змейка переходит на правую сторону
+            mvprintw(head->y, --(head->x), "%c", ch);   // Перемещаем голову налево
             break;
         case RIGHT:
-            mvprintw(head->y, ++(head->x), "%c", ch);
+            if(head->x >= max_x)                        // Змейка пересекает правую границу
+                head->x = 0;                            // Змейка переходит  на левую сторону
+            mvprintw(head->y, ++(head->x), "%c", ch);   // Перемещаем голову направо
             break;
         case UP:
-            mvprintw(--(head->y), head->x, "%c", ch);
+            if(head->y <= 0)                            // Змейка пересекает верхнюю границу
+                head->y = max_y;                        // Змейка переходит на нижнюю сторону
+            mvprintw(--(head->y), head->x, "%c", ch);   // Перемещаем голову вверх
             break;
         case DOWN:
-            mvprintw(++(head->y), head->x, "%c", ch);
+            if(head->y >= max_y)                        // Змейка пересекает нижнюю границу
+                head->y = 0;                            // Змейка переходит на верхнюю сторону
+            mvprintw(++(head->y), head->x, "%c", ch);   // Перемещаем голову вниз
             break;
         default:
             break;
@@ -143,7 +148,7 @@ int main()
     raw();                // Откдючаем line buffering
     noecho();            // Отключаем echo() режим при вызове getch
     curs_set(FALSE);    //Отключаем курсор
-    mvprintw(0, 0,"Use arrows for control. Press 'F10' for EXIT");
+    mvprintw(0, 1,"Use arrows for control. Press 'F10' for EXIT");
     timeout(0);    //Отключаем таймаут после нажатия клавиши в цикле
     int key_pressed=0;
     while( key_pressed != STOP_GAME )
