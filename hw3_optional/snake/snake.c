@@ -1,12 +1,11 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <curses.h>
 #include <inttypes.h>
 #include <string.h>
-#include <unistd.h>
 
 #define MIN_Y  2
+#define PINK 100
 double DELAY = 0.1;
 enum
 {
@@ -28,9 +27,7 @@ struct control_buttons
 
 struct control_buttons default_controls[CONTROLS] = {{KEY_DOWN, KEY_UP, KEY_LEFT, KEY_RIGHT},
                                                      {'s', 'w', 'a', 'd'},
-                                                     {'S', 'W', 'A', 'D'},
-                                                     {'ы', 'ц', 'ф', 'в'},
-                                                     {'Ы', 'Ц', 'Ф', 'В'}};
+                                                     {'S', 'W', 'A', 'D'}};
 
 /*
  Голова змейки содержит в себе
@@ -251,11 +248,20 @@ int main()
     keypad(stdscr, TRUE);          // Включаем F1, F2, стрелки и т.д.
     raw();                         // Отключаем line buffering
     noecho();                      // Отключаем echo() режим при вызове getch
-    curs_set(FALSE);               //Отключаем курсор
-    mvprintw(0, 0, "Use arrows for control. Press 'F10' for EXIT");
-    timeout(0);                    //Отключаем таймаут после нажатия клавиши в цикле
+    curs_set(FALSE);               // Отключаем курсор
+    mvprintw(0, 1, "Use arrows for control. Press 'F10' for EXIT");
+    /* Работа с цветом */
+    start_color();                             // Включение работы с цветами
+    if (!can_change_color())
+        addstr("This probably won't work...\n");
+    init_color(PINK, 1000, 750, 750);          // Пользовательский цвет PINK
+    start_color();                             // Создание цветовых пар
+    init_pair(1, PINK, COLOR_BLUE);            // Базовое окно базовый белый
+    bkgd(COLOR_PAIR(1));                       // Базовое окно терминала
+
+    timeout(0);                                //Отключаем таймаут после нажатия клавиши в цикле
     initFood(food, MAX_FOOD_SIZE);
-    putFood(food, SEED_NUMBER);    // Кладем зерна
+    putFood(food, SEED_NUMBER); // Кладем зерна
     int key_pressed = 0;
     while (key_pressed != STOP_GAME)
     {
