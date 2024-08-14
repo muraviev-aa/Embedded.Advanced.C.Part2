@@ -22,5 +22,6 @@ add_executable(3_2 hw3_optional/3_2/main.c hw3_optional/3_1/lib.c)
 add_executable(3_3 hw3_optional/snake/snake.c)
 add_executable(3_1_1 hw3_optional/1.c)
 add_executable(3_1_2 hw3_optional/2.c)
+add_executable(5_4 hw5/4.c)
 
 target_link_libraries( 3_3 ${CURSES_LIBRARIES} )
