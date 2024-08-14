@@ -7,10 +7,9 @@ int count_res(int *res, int n);
 int main()
 {
     int arr_num[30] = {0};   // заданное натуральное число
-    printf("%d\n", count_num(arr_num, get_num(arr_num)));
+    printf("%d", count_num(arr_num, get_num(arr_num)));
     return 0;
 }
-
 
 int count_num(int *arr_num, int n)
 {
