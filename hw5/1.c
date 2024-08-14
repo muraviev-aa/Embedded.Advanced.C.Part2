@@ -4,7 +4,7 @@ int get_num(int *arr_num);
 int count_num(int *arr_num, int n);
 int count_res(int *res, int n);
 
-int main()
+int main(void)
 {
     int arr_num[30] = {0};   // заданное натуральное число
     printf("%d", count_num(arr_num, get_num(arr_num)));

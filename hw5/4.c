@@ -13,7 +13,7 @@ int zero_count(int num)
     return count;
 }
 
-int main()
+int main(void)
 {
     int N;            // количество чисел
     int K;            // количество нулей
