@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 // Подсчет количества нулей в двоичной записи числа
-int count_zero(int num)
+int zero_count(int num)
 {
     int count = 0;
     while (num)
     {
-        if ((num & 1) == 0)
-            count++;
+        if ((num & 1) == 0)   // если текущий бит равен нулю
+            count++;          // ведем подсчет нулей
         num >>= 1;
     }
     return count;
@@ -23,7 +23,7 @@ int main()
 
     for (int i = 1; i <= N; i++)
     {
-        if (count_zero(i) == K)
+        if (zero_count(i) == K)
             count++;
     }
 
