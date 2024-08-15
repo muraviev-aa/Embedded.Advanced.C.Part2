@@ -24,6 +24,7 @@ add_executable(3_1_1 hw3_optional/1.c)
 add_executable(3_1_2 hw3_optional/2.c)
 add_executable(5_1 hw5/1.c)
 add_executable(5_2 hw5/2.c)
+add_executable(5_3 hw5/3.c)
 add_executable(5_4 hw5/4.c)
 
 
