@@ -19,6 +19,8 @@
 
 * [Алгоритмы](#title5)
 
+* [GoogleTest](#title6)
+
 -----
 
 ### <a id="title1">Часть 1</a>
@@ -128,11 +130,11 @@
 
 -----
 
-### <a id="title5">Часть 6</a>
+### <a id="title6">Часть 6</a>
 
 <strong> &#128194; hw6. GoogleTest</strong> 
 
-* &#128448; calculations
+* <strong> &#128448; calculations</strong>
 
   Структура проекта:
 
@@ -155,9 +157,32 @@ calculations/                   # Корневая папка проекта
 
 -----
 
-### <a id="title5">Часть 7</a>
+### <a id="title7">Часть 7</a>
 
 <strong> &#128194; hw7. GoogleTest</strong> 
+
+* <strong> &#128448; calculations</strong>
+
+Структура проекта:
+
+```plaintext
+calculations/                   # Корневая папка проекта
+├── CMakeLists.txt              # Файл конфигурации сборки проекта
+├── resources/                  # Файлы доп. ресурсов (SQLite, файл БД)       
+├── include/                    # Папка с заголовочными файлами
+│   ├── calculations.h 
+│   └── area.h         
+├── src/                        # Папка с исходными файлами реализации
+│   ├── area.c     
+│   ├── calculations.c    
+│   └── main.c                  # Точка входа в программу
+└── tests/                      # Папка с тестами
+    ├── CMakeLists.txt          # Файл конфигурации сборки тестов
+    ├── area_test.cpp
+    ├── sqlite_test.cpp
+    ├── calculations_test.cpp
+    └── main_test.cpp           # Запуск тестов
+```
 
 -----
 
