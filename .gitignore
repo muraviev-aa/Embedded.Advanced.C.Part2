@@ -53,3 +53,6 @@ dkms.conf
 /hw6/calculations/googletest
 /hw6/calculations/.idea
 /hw6/calculations/cmake-build-debug
+/hw7/calculations/cmake-build-debug
+/hw7/calculations/.idea
+/hw7/calculations/resources/sqlite
