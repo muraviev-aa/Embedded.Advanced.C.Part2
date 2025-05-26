@@ -56,3 +56,5 @@ dkms.conf
 /hw7/calculations/cmake-build-debug
 /hw7/calculations/.idea
 /hw7/calculations/resources/sqlite
+/hw8/calculations/.idea
+/hw8/calculations/cmake-build-debug
