@@ -167,6 +167,8 @@
 
 * <strong> &#128448; calculations</strong>
 
+GoogleTest установлен с помощью FetchContent в CMake.
+
 Структура проекта:
 
 ```plaintext
@@ -196,6 +198,8 @@
 <strong> &#128194; hw8. Unity</strong> 
 
 * <strong> &#128448; calculations</strong>
+
+Unity установлен с помощью FetchContent в CMake.
 
 Структура проекта:
 
